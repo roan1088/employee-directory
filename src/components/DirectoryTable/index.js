@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function DirectoryTable({ displayState }) {
+function DirectoryTable({ displayState, sortBy }) {
   let icon;
   if (displayState.asc) {
     icon = "▲";
@@ -12,9 +12,9 @@ function DirectoryTable({ displayState }) {
   return (<table id="directory-table">
     <thead>
       <tr>
-        <th>Name {displayState.sortBy === "name" ? icon : ""}</th>
-        <th>Role {displayState.sortBy === "role" ? icon : ""}</th>
-        <th>Department {displayState.sortBy === "department" ? icon : ""}</th>
+        <th onClick={() => sortBy("name")}>Name {displayState.sortBy === "name" ? icon : ""}</th>
+        <th onClick={() => sortBy("role")}>Role {displayState.sortBy === "role" ? icon : ""}</th>
+        <th onClick={() => sortBy("department")}>Department {displayState.sortBy === "department" ? icon : ""}</th>
       </tr>
     </thead>
     <tbody>
