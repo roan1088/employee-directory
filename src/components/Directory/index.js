@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import DirectorySearch from "../DirectorySearch";
 import DirectoryTable from "../DirectoryTable";
 import "./style.css";
 
@@ -43,7 +44,7 @@ function Directory({ employeeState }) {
   }
 
   return (<div id="directory">
-    <p>Directory Area</p>
+    <DirectorySearch />
     <DirectoryTable displayState={displayState} sortBy={sortBy} />
   </div>);
 }
