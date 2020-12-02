@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DirectoryTable from "../DirectoryTable";
 import "./style.css";
 
-function Directory() {
+function Directory({ employees }) {
+  const [displayState, setDisplayState] = useState([]);
+
+  useEffect(() => {
+    setDisplayState(employees);
+  }, [employees]);
+
   return (<div id="directory">
     <p>Directory Area</p>
-    <DirectoryTable />
+    <DirectoryTable displayState={displayState} />
   </div>);
 }
 

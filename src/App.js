@@ -22,7 +22,7 @@ function App() {
     <div>
       <Header />
       <Main>
-        <Directory />        
+        <Directory employees={employeeState.employees} />        
       </Main>
     </div>
   );
