@@ -28,6 +28,36 @@ const employees = [{
   name: "Dwight Schrute",
   role: "Sales Representative",
   department: "Sales"
+},
+{
+  id: 6,
+  name: "Andy Bernard",
+  role: "Sales Representative",
+  department: "Sales"
+},
+{
+  id: 7,
+  name: "Angela Martin",
+  role: "Senior Accountant",
+  department: "Accounting"
+},
+{
+  id: 8,
+  name: "Kevin Malone",
+  role: "Accountant",
+  department: "Accounting"
+},
+{
+  id: 9,
+  name: "Oscar Malone",
+  role: "Accountant",
+  department: "Accounting"
+},
+{
+  id: 10,
+  name: "Toby Flenderson",
+  role: "Human Resources Representative",
+  department: "Human Resources"
 }];
 
 // This code is meant to serve as a mock fetch from an API.
