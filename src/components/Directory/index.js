@@ -18,22 +18,19 @@ function Directory({ employeeState }) {
 
   const sortBy = (col) => {
     if (displayState.sortBy === col) {
+      let newDisplay;
       if (displayState.asc) {
-        setDisplayState({
-          ...displayState,
-          employees: displayState.employees.sort((a, b) => a[col] < b[col] ? 1 : -1),
-          sortBy: col,
-          asc: false
-        });
+        newDisplay = displayState.employees.sort((a, b) => a[col] < b[col] ? 1 : -1);
       }
       else {
-        setDisplayState({
-          ...displayState,
-          employees: displayState.employees.sort((a, b) => a[col] > b[col] ? 1 : -1),
-          sortBy: col,
-          asc: true
-        });
+        newDisplay = displayState.employees.sort((a, b) => a[col] > b[col] ? 1 : -1);
       }
+      setDisplayState({
+        ...displayState,
+        employees: newDisplay,
+        sortBy: col,
+        asc: !displayState.asc
+      });
     }
     else {
       setDisplayState({
