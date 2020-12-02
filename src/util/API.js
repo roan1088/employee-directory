@@ -1,5 +1,5 @@
 // Dummy data to mock API fetch
-employees = [{
+const employees = [{
   name: "Michael Scott",
   role: "Regional Manager",
   department: "Management"
