@@ -11,7 +11,7 @@ function DirectoryTable({ displayState }) {
       </tr>
     </thead>
     <tbody>
-      {displayState.map(employee => <tr>
+      {displayState.map(employee => <tr key={employee.id}>
         <td>{employee.name}</td>
         <td>{employee.role}</td>
         <td>{employee.department}</td>
