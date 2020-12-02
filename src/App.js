@@ -14,7 +14,7 @@ function App() {
     document.title = "Employee Directory";
     // For demonstration purposes, we mock an API call
     API.getAllEmployees.then(res => {
-      setEmployeeState(res);
+      setEmployeeState({employees: res});
     })
   }, []);
 
