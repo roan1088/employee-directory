@@ -44,8 +44,15 @@ function Directory({ employeeState }) {
     }
   }
 
+  const updateSearch = (term) => {
+    setDisplayState({
+      ...displayState,
+      search: term
+    });
+  }
+
   return (<div id="directory">
-    <DirectorySearch />
+    <DirectorySearch updateSearch={updateSearch} />
     <DirectoryTable displayState={displayState} sortBy={sortBy} />
   </div>);
 }
