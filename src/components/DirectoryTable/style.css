@@ -1,3 +1,9 @@
 #directory-table {
   width: 100%;
 }
+
+#directory-table th, #directory-table td {
+  padding: 4px;
+  border: 1px #eeeeee solid;
+  cursor: pointer;
+}
