@@ -18,7 +18,7 @@ function DirectoryTable({ displayState, sortBy }) {
       </tr>
     </thead>
     <tbody>
-      {displayState.employees.map(employee => <tr key={employee.id}>
+      {displayState.employees.filter(employee => displayState.search ? employee.name.toLowerCase().includes(displayState.search.toLowerCase()) : true).map(employee => <tr key={employee.id}>
         <td>{employee.name}</td>
         <td>{employee.role}</td>
         <td>{employee.department}</td>

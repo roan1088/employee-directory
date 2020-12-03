@@ -7,7 +7,8 @@ function Directory({ employeeState }) {
   const [displayState, setDisplayState] = useState({
     employees: [],
     sortBy: "",
-    asc: true
+    asc: true,
+    search: ""
   });
 
   useEffect(() => {
