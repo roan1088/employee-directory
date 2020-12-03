@@ -3,7 +3,7 @@ import DirectorySearch from "../DirectorySearch";
 import DirectoryTable from "../DirectoryTable";
 import "./style.css";
 
-function Directory({ employeeState }) {
+function Directory({ employeeState, newProfile }) {
   const [displayState, setDisplayState] = useState({
     employees: [],
     sortBy: "",
@@ -53,7 +53,7 @@ function Directory({ employeeState }) {
 
   return (<div id="directory">
     <DirectorySearch updateSearch={updateSearch} />
-    <DirectoryTable displayState={displayState} sortBy={sortBy} />
+    <DirectoryTable displayState={displayState} sortBy={sortBy} newProfile={newProfile} />
   </div>);
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function DirectoryTable({ displayState, sortBy }) {
+function DirectoryTable({ displayState, sortBy, newProfile }) {
   let icon;
   if (displayState.asc) {
     icon = "▲";
@@ -18,7 +18,7 @@ function DirectoryTable({ displayState, sortBy }) {
       </tr>
     </thead>
     <tbody>
-      {displayState.employees.filter(employee => displayState.search ? employee.name.toLowerCase().includes(displayState.search.toLowerCase()) : true).map(employee => <tr key={employee.id}>
+      {displayState.employees.filter(employee => displayState.search ? employee.name.toLowerCase().includes(displayState.search.toLowerCase()) : true).map(employee => <tr key={employee.id} onClick={() => newProfile(employee.id)}>
         <td>{employee.name}</td>
         <td>{employee.role}</td>
         <td>{employee.department}</td>

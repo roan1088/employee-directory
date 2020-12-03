@@ -10,6 +10,7 @@ function App() {
   const [employeeState, setEmployeeState] = useState({
     employees: []
   });
+  const [profileState, setProfileState] = useState({});
 
   useEffect(() => {
     document.title = "Employee Directory";
@@ -19,12 +20,16 @@ function App() {
     })
   }, []);
 
+  const newProfile = (id) => {
+    setProfileState(employeeState.employees.filter(employee => employee.id === id)[0]);
+  }
+
   return (
     <div>
       <Header />
       <Main>
-        <Directory employeeState={employeeState} />        
-        <Profile />
+        <Directory employeeState={employeeState} newProfile={newProfile} />        
+        <Profile profileState={profileState} />
       </Main>
     </div>
   );
