@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Directory from "./components/Directory";
 import * as API from "./util/API";
+import Profile from "./components/Profile";
 
 function App() {
   const [employeeState, setEmployeeState] = useState({
@@ -23,6 +24,7 @@ function App() {
       <Header />
       <Main>
         <Directory employeeState={employeeState} />        
+        <Profile />
       </Main>
     </div>
   );
