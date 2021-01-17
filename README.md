@@ -7,6 +7,8 @@ https://roan1088.github.io/employee-directory/
 ## Description
 A employee directory to view non-sensitive data about other employees. This app is created using React.
 
+![Employee Directory](./images/employee-directory.png)
+
 ## Table of Contents
 - [Usage](#usage)
 - [Contributing](#contributing)
